@@ -1,20 +1,20 @@
 const personalData = {
-    "name": "[Your Name]",
+    "name": "Tushar Talukder Showrav",
     "title": "PhD Student",
     "university": "University of Illinois Urbana-Champaign",
-    "email": "email@illinois.edu",
+    "email": "showrav2@illinois.edu",
     "cv_link": "cv.pdf",
     
     // Bio: Use <br> for new lines
-    "bio": "PhD Student at the <strong>University of Illinois Urbana-Champaign</strong>.<br>My research bridges the gap between <strong>Medical Imaging</strong> and <strong>Explainable AI</strong>. Currently working on Quantitative Phase Imaging (QPI) and interpreting physiological signals.",
+    "bio": "PhD Student at the <strong>University of Illinois Urbana-Champaign</strong>.<br>My research bridges the gap between <strong>Biomedical Imaging</strong> and <strong>Explainable AI</strong>. Currently working on Quantitative Phase Imaging (QPI) and cancer detection.",
     
     // Your Photo URL
     "photo_url": "https://via.placeholder.com/200", 
 
     "social_links": {
-        "google_scholar": "#",
-        "github": "#",
-        "linkedin": "#"
+        "google_scholar": "https://scholar.google.com/citations?user=SWo7um4AAAAJ&hl=en",
+        "github": "https://github.com/tushartalukder/",
+        "linkedin": "https://www.linkedin.com/in/tushar-talukder/"
     },
 
     "updates": [
@@ -63,4 +63,5 @@ const personalData = {
         "https://via.placeholder.com/201",
         "https://via.placeholder.com/202"
     ]
+
 };
