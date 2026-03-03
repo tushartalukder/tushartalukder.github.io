@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhD Researcher Profile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #09637E; --accent: #088395; --text: #111; --text-light: #555;
+            --bg: #ffffff; --skeleton: #f0f0f0; --border: #eaeaea;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; max-width: 900px; margin: 0 auto; padding: 4rem 2rem; }
+        
+        /* Header */
+        header { display: flex; justify-content: space-between; gap: 40px; margin-bottom: 4rem; padding-bottom: 3rem; border-bottom: 1px solid var(--border); }
+        .header-content { flex: 1; }
+        h1 { font-size: 2.5rem; letter-spacing: -0.02em; margin-bottom: 0.8rem; color: var(--primary); }
+        p.bio { font-size: 1.1rem; color: var(--text-light); margin-bottom: 2rem; }
+        .profile-photo { width: 200px; height: 200px; flex-shrink: 0; background-color: var(--skeleton); border-radius: 12px; overflow: hidden; transform: rotate(2deg); transition: transform 0.3s; }
+        .profile-photo:hover { transform: rotate(0deg) scale(1.02); }
+        .profile-photo img { width: 100%; height: 100%; object-fit: cover; }
+        
+        /* Buttons */
+        .action-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 15px; }
+        .btn-cv { background-color: var(--primary); color: white !important; padding: 10px 20px; border-radius: 6px; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; }
+        .social-link { color: var(--text-light); font-weight: 500; text-decoration: none; }
+        .social-link:hover { color: var(--primary); }
+
+        /* Sections */
+        section { margin-bottom: 5rem; }
+        h2 { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.1em; color: #888; margin-bottom: 1.5rem; font-weight: 700; border-left: 3px solid var(--primary); padding-left: 12px; }
+        
+        /* Dynamic Components */
+        .news-item { display: grid; grid-template-columns: 80px 1fr; gap: 1rem; font-size: 0.95rem; margin-bottom: 0.8rem; }
+        .news-date { font-family: monospace; color: var(--primary); font-weight: 600; text-align: right; }
+
+        .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .project-card { border: 1px solid var(--border); padding: 1.5rem; border-radius: 8px; transition: transform 0.2s; background: #fff; }
+        .project-card:hover { transform: translateY(-3px); border-color: var(--primary); }
+        .tag { font-size: 0.75rem; background: #eef4f6; color: var(--primary); padding: 3px 8px; border-radius: 50px; font-weight: 500; margin-right: 5px;}
+
+        .pub-row { display: flex; gap: 20px; padding: 1.2rem; border: 1px solid transparent; border-radius: 8px; transition: all 0.2s; margin-bottom: 1rem; }
+        .pub-row:hover { border-color: #eee; box-shadow: 0 5px 15px rgba(0,0,0,0.03); }
+        .pub-thumb { width: 120px; height: 80px; flex-shrink: 0; background: #eee; border-radius: 4px; overflow: hidden; opacity: 0.7; filter: grayscale(100%); transition: all 0.3s; }
+        .pub-thumb img { width: 100%; height: 100%; object-fit: cover; }
+        .pub-row:hover .pub-thumb { opacity: 1; filter: grayscale(0%); }
+
+        @media (max-width: 768px) { header { flex-direction: column-reverse; align-items: center; text-align: center; } .profile-photo { width: 150px; height: 150px; } .news-item { display: block; } .pub-thumb { display: none; } }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <h1 id="p-name">Loading...</h1>
+            <p class="bio" id="p-bio"></p>
+            <div class="action-bar">
+                <a id="p-cv" href="#" class="btn-cv" target="_blank">Download CV ↓</a>
+                <a id="link-email" href="#" class="social-link">Email</a>
+                <a id="link-scholar" href="#" class="social-link">Scholar</a>
+                <a id="link-github" href="#" class="social-link">GitHub</a>
+                <a id="link-linkedin" href="#" class="social-link">LinkedIn</a>
+            </div>
+        </div>
+        <div class="profile-photo"><img id="p-photo" src="" alt="Profile"></div>
+    </header>
+
+    <main>
+        <section id="sec-updates">
+            <h2>Latest Updates</h2>
+            <div class="news-list" id="list-updates"></div>
+        </section>
+
+        <section id="sec-projects">
+            <h2>Current Projects</h2>
+            <div class="project-grid" id="list-projects"></div>
+        </section>
+
+        <section id="sec-publications">
+            <h2>Selected Publications</h2>
+            <div id="list-pubs"></div>
+        </section>
+
+        <section id="sec-photos">
+            <h2>Photography</h2>
+            <div id="list-photos" style="display: flex; gap: 10px; overflow-x: auto; padding-bottom: 10px;"></div>
+        </section>
+    </main>
+
+    <script src="content.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof personalData === 'undefined') {
+                console.error("content.js not loaded");
+                return;
+            }
+            const data = personalData;
+
+            // 1. Header Info
+            document.getElementById('p-name').innerText = data.name;
+            document.getElementById('p-bio').innerHTML = data.bio;
+            document.getElementById('p-cv').href = data.cv_link;
+            document.getElementById('p-photo').src = data.photo_url;
+            
+            document.getElementById('link-email').href = "mailto:" + data.email;
+            document.getElementById('link-scholar').href = data.social_links.google_scholar;
+            document.getElementById('link-github').href = data.social_links.github;
+            document.getElementById('link-linkedin').href = data.social_links.linkedin;
+
+            // 2. Updates
+            const updatesList = document.getElementById('list-updates');
+            data.updates.forEach(u => {
+                updatesList.innerHTML += `
+                    <div class="news-item">
+                        <span class="news-date">${u.date}</span>
+                        <span>${u.text}</span>
+                    </div>`;
+            });
+
+            // 3. Projects
+            const projList = document.getElementById('list-projects');
+            data.projects.forEach(p => {
+                let tagsHtml = p.tags.map(t => `<span class="tag">${t}</span>`).join('');
+                projList.innerHTML += `
+                    <div class="project-card">
+                        <h3>${p.title}</h3>
+                        <p style="color:#555; font-size:0.9rem; margin-bottom:1rem;">${p.description}</p>
+                        <div class="project-tags">${tagsHtml}</div>
+                    </div>`;
+            });
+
+            // 4. Publications
+            const pubList = document.getElementById('list-pubs');
+            data.publications.forEach(pub => {
+                pubList.innerHTML += `
+                    <div class="pub-row">
+                        <div class="pub-thumb"><img src="${pub.image}" alt="Paper"></div>
+                        <div>
+                            <span class="pub-title" style="font-weight:700; display:block; margin-bottom:0.3rem;">${pub.title}</span>
+                            <div style="font-size:0.9rem; color:#555;">
+                                ${pub.authors}<br>
+                                <em>${pub.venue}</em>
+                                <span class="tag" style="margin-left:8px;">${pub.tag}</span>
+                            </div>
+                        </div>
+                    </div>`;
+            });
+
+            // 5. Photos
+            const photoList = document.getElementById('list-photos');
+            data.photography.forEach(url => {
+                photoList.innerHTML += `<img src="${url}" style="height: 150px; border-radius: 6px;">`;
+            });
+        });
+    </script>
+</body>
+</html>
