@@ -139,7 +139,10 @@
                     <div class="pub-row">
                         <div class="pub-thumb"><img src="${pub.image}" alt="Paper"></div>
                         <div>
-                            <span class="pub-title" style="font-weight:700; display:block; margin-bottom:0.3rem;">${pub.title}</span>
+                            <a href="${pub.link}" target="_blank" class="pub-title" style="font-weight:700; display:block; margin-bottom:0.3rem; text-decoration:none; color:#111;">
+                                ${pub.title}
+                            </a>
+                            
                             <div style="font-size:0.9rem; color:#555;">
                                 ${pub.authors}<br>
                                 <em>${pub.venue}</em>
@@ -159,3 +162,4 @@
 </body>
 
 </html>
+
