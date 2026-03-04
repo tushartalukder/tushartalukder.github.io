@@ -170,7 +170,7 @@
 
     <footer>
         <div class="footer-quote">"I would rather have questions that can't be answered than answers that can't be questioned." <br> - Richard Feynman</div>
-        <div>Last updated: 21st August, 2025</div>
+        <div>Last updated: <span id="last-update-text">Loading...</span></div>
     </footer>
 
     <script src="content.js"></script>
@@ -183,7 +183,7 @@
             }
             const data = personalData;
 
-            // 1. Header Info 
+            // 1. Header Info
             if (data.name) {
                 const nameParts = data.name.split(' ');
                 const firstWord = nameParts[0];
@@ -240,6 +240,21 @@
                         </div>
                     </div>`;
             });
+
+            // 5. Auto-fetch Last Update Date from GitHub (Smart Feature)
+            fetch('https://api.github.com/repos/tushartalukder/tushartalukder.github.io/commits/main')
+                .then(response => response.json())
+                .then(data => {
+                    const date = new Date(data.commit.author.date);
+                    // Formats date nicely, e.g., "4 March 2026"
+                    const options = { day: 'numeric', month: 'long', year: 'numeric' };
+                    document.getElementById('last-update-text').innerText = date.toLocaleDateString('en-GB', options);
+                })
+                .catch(error => {
+                    // Fallback if GitHub API is blocked or loading locally
+                    const fallbackDate = new Date(document.lastModified);
+                    document.getElementById('last-update-text').innerText = fallbackDate.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+                });
         });
     </script>
 </body>
