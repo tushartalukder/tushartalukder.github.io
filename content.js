@@ -6,10 +6,11 @@ const personalData = {
     "cv_link": "cv.pdf",
     
     // Bio: Use <br> for new lines
-    // "bio": "PhD Student at the <strong>University of Illinois Urbana-Champaign</strong>.<br>My research bridges the gap between <strong>Biomedical Imaging</strong> and <strong>Explainable AI</strong>. Currently working on Quantitative Phase Imaging (QPI) and cancer detection.",
-    "bio": "I am a first year PhD student at the <strong>University of Illinois Urbana-Champaign (UIUC)</strong>. Prior to joining UIUC, I received my B.Sc. in Electrical and Electronic Engineering from the <strong>Bangladesh University of Engineering and Technology (BUET)</strong>.<br><br>My research interests lie at the intersection of <strong>Computer Vision, Medical Image Analysis, and Deep Learning</strong>. Currently, my work focuses on developing robust, physics-informed AI models and <strong>Explainable AI (XAI)</strong> frameworks for biomedical imaging—including Quantitative Phase Imaging (QPI), ultrasound elastography, and physiological signal analysis—to facilitate trustworthy clinical diagnostics.",
+    // Updated: Hyperlinks added for UIUC and BUET
+    "bio": "I am a PhD Student at the <a href='https://illinois.edu/' target='_blank'><strong>University of Illinois Urbana-Champaign (UIUC)</strong></a>.<br>Previously, I received my B.Sc. in Electrical and Electronic Engineering from the <a href='https://www.buet.ac.bd/' target='_blank'><strong>Bangladesh University of Engineering and Technology (BUET)</strong></a>.<br>My research bridges the gap between <strong>Biomedical Imaging</strong> and <strong>Explainable AI</strong>. Currently working on Quantitative Phase Imaging (QPI) and cancer detection.",
+    
     // Your Photo URL
-    "photo_url": "dp1.jpeg", 
+    "photo_url": "https://via.placeholder.com/200", 
 
     "social_links": {
         "google_scholar": "https://scholar.google.com/citations?user=SWo7um4AAAAJ&hl=en",
@@ -18,13 +19,12 @@ const personalData = {
     },
 
     "updates": [
-        { "date": "Mar 2026", "text": "CARDxnosis is published in Neurocomputing." },
+        { "date": "Mar 2026", "text": "CARDxnosis is published in Healthcare Analytics." },
         { "date": "Feb 2026", "text": "EXGnet is published in Healthcare Analytics." },
         { "date": "Jan 2026", "text": "Started PhD at UIUC." },
-        { "date": "Nov 2025", "text": "Our myECGai, AI-based portable ECG device launched in the global market." },
         { "date": "Aug 2025", "text": "DFUSegNet is published in Knowledge-Based Systems." },
         { "date": "Apr 2024", "text": "Hi-gMISnet is published in Physics in Medicine and Biology." },
-        { "date": "Nov 2023", "text": "Joined Teton Private Ltd. as a contractual ML engineer." },
+        { "date": "Nov 2023", "text": "Joined Teton Private Ltd. as a contractual ML engineer." }
     ],
 
     "projects": [
@@ -86,6 +86,7 @@ const personalData = {
     ]
 
 };
+
 
 
 
