@@ -6,8 +6,8 @@ const personalData = {
     "cv_link": "cv.pdf",
     
     // Bio: Use <br> for new lines
-    "bio": "PhD Student at the <strong>University of Illinois Urbana-Champaign</strong>.<br>My research bridges the gap between <strong>Biomedical Imaging</strong> and <strong>Explainable AI</strong>. Currently working on Quantitative Phase Imaging (QPI) and cancer detection.",
-    
+    // "bio": "PhD Student at the <strong>University of Illinois Urbana-Champaign</strong>.<br>My research bridges the gap between <strong>Biomedical Imaging</strong> and <strong>Explainable AI</strong>. Currently working on Quantitative Phase Imaging (QPI) and cancer detection.",
+    "bio": "I am a first year PhD student at the <strong>University of Illinois Urbana-Champaign (UIUC)</strong>. Prior to joining UIUC, I received my B.Sc. in Electrical and Electronic Engineering from the <strong>Bangladesh University of Engineering and Technology (BUET)</strong>.<br><br>My research interests lie at the intersection of <strong>Computer Vision, Medical Image Analysis, and Deep Learning</strong>. Currently, my work focuses on developing robust, physics-informed AI models and <strong>Explainable AI (XAI)</strong> frameworks for biomedical imaging—including Quantitative Phase Imaging (QPI), ultrasound elastography, and physiological signal analysis—to facilitate trustworthy clinical diagnostics.",
     // Your Photo URL
     "photo_url": "dp1.jpeg", 
 
@@ -86,6 +86,7 @@ const personalData = {
     ]
 
 };
+
 
 
 
