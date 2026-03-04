@@ -9,7 +9,7 @@ const personalData = {
     "bio": "PhD Student at the <strong>University of Illinois Urbana-Champaign</strong>.<br>My research bridges the gap between <strong>Biomedical Imaging</strong> and <strong>Explainable AI</strong>. Currently working on Quantitative Phase Imaging (QPI) and cancer detection.",
     
     // Your Photo URL
-    "photo_url": "dp.jpeg", 
+    "photo_url": "dp1.jpeg", 
 
     "social_links": {
         "google_scholar": "https://scholar.google.com/citations?user=SWo7um4AAAAJ&hl=en",
@@ -86,6 +86,7 @@ const personalData = {
     ]
 
 };
+
 
 
 
