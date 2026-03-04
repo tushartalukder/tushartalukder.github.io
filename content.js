@@ -20,10 +20,10 @@ const personalData = {
     "updates": [
         { "date": "Mar 2026", "text": "CARDxnosis is published in Healthcare Analytics." },
         { "date": "Feb 2026", "text": "EXGnet is published in Healthcare Analytics." },
-        { "date": "Jan 2026", "text": "Started PhD at UIUC.'" }
-        { "date": "Aug 2025", "text": "DFUSegNet is published in Knowledge-Based Systems.'" }
-        { "date": "Apr 2024", "text": "Hi-gMISnet is published in Physics in Medicine and Biology.'" }
-        { "date": "Nov 2023", "text": "Joined Teton Private Ltd. as a contractual ML engineer.'" }
+        { "date": "Jan 2026", "text": "Started PhD at UIUC.'" },
+        { "date": "Aug 2025", "text": "DFUSegNet is published in Knowledge-Based Systems.'" },
+        { "date": "Apr 2024", "text": "Hi-gMISnet is published in Physics in Medicine and Biology.'" },
+        { "date": "Nov 2023", "text": "Joined Teton Private Ltd. as a contractual ML engineer.'" },
     ],
 
     "projects": [
@@ -81,5 +81,6 @@ const personalData = {
     ]
 
 };
+
 
 
