@@ -7,17 +7,13 @@ const personalData = {
     
     // Bio: Use <br> for new lines
     // Updated: Hyperlinks added for UIUC and BUET
-    "bio": `<p>Hi, I am Tushar Talukder Showrav (just call me Tushar), currently a first-year PhD student at the <a href="https://illinois.edu/" target="_blank" rel="noopener noreferrer">University of Illinois Urbana-Champaign (UIUC)</a>.</p>
+    "bio": `<p>Hi, I am Tushar Talukder Showrav (just call me Tushar), currently a first-year PhD student at the <a href="https://illinois.edu/" target="_blank" rel="noopener noreferrer">University of Illinois Urbana-Champaign (UIUC)</a>. My research sits at the intersection of Biomedical Imaging and Explainable AI. I focus on computational imaging and interpretable deep learning methods for biomedical and healthcare applications. Currently, I am working on Quantitative Phase Imaging (QPI) and AI-driven cancer detection, developing transparent and reliable models that can meaningfully support clinical decision-making and translational research.</p>
         
-        <p>My research sits at the intersection of Biomedical Imaging and Explainable AI. I focus on computational modeling, quantitative analysis, and interpretable deep learning methods for healthcare applications. Currently, I am working on Quantitative Phase Imaging (QPI) and AI-driven cancer detection, developing transparent and reliable models that can meaningfully support clinical decision-making and translational research.</p>
-        
-        <p>Previously, I earned my B.Sc. in Electrical and Electronic Engineering from the <a href="https://www.buet.ac.bd/" target="_blank" rel="noopener noreferrer">Bangladesh University of Engineering and Technology (BUET)</a>. Over the years, I have published research in medical image analysis and AI for healthcare, gaining experience across both academic research and industry-driven development.</p>
-        
-        <p>Before beginning my PhD, I worked as a full-time Research Assistant in a signal processing research lab at BUET and later as a contractual Machine Learning Engineer at a Silicon Valley–based company, contributing to real-world healthcare AI systems.</p>
+        <p>Previously, I earned my B.Sc. in Electrical and Electronic Engineering from the <a href="https://www.buet.ac.bd/" target="_blank" rel="noopener noreferrer">Bangladesh University of Engineering and Technology (BUET)</a>. Over the years, I have published research in medical image analysis and AI for healthcare, gaining experience across both academic research and industry-driven development. Before beginning my PhD, I worked as a full-time Research Assistant in a signal processing research lab at BUET and later as a contractual Machine Learning Engineer at a Silicon Valley–based company, contributing to real-world healthcare AI systems.</p>
         
         <p>Beyond research, I have taken on leadership roles in student technical organizations, organizing engineering events and promoting collaborative innovation. I enjoy music and play the guitar, and I strongly value interdisciplinary collaboration, mentorship, and an engaged research community.</p>`,
     // Your Photo URL
-    "photo_url": "https://via.placeholder.com/200", 
+    "photo_url": "dp1.jpeg", 
 
     "social_links": {
         "google_scholar": "https://scholar.google.com/citations?user=SWo7um4AAAAJ&hl=en",
@@ -53,7 +49,7 @@ const personalData = {
             "authors": "<strong>Tushar Talukder Showrav</strong>, Soyabul Islam Lincoln, Md Kamrul Hasan",
             "venue": "Healthcare Analytics, Volume 9, June 2026, 100455",
             "tag": "AI in Healthcare, Explainable AI",
-            "image": "https://via.placeholder.com/200x150",
+            "image": "exg.png",
             "link": "https://www.sciencedirect.com/science/article/pii/S2772442526000092"
             // "year": "2026"
         },
@@ -62,7 +58,7 @@ const personalData = {
             "authors": "<strong>Tushar Talukder Showrav</strong>, Muhammad Zubair Hasan, Md Kamrul Hasan",
             "venue": "Knowledge-Based Systems, Volume 329, Part A, 4 November 2025, 114323",
             "tag": "Medical Image Segmentation, Computer Vision",
-            "image": "https://via.placeholder.com/200x150",
+            "image": "dfu.png",
             "link": "https://www.sciencedirect.com/science/article/abs/pii/S0950705125013632"
             // "year": "2025"
         },
@@ -71,7 +67,7 @@ const personalData = {
             "authors": "Shourov Joarder, <strong>Tushar Talukder Showrav</strong>, Md. Kamrul Hasan",
             "venue": "arXiv:2511.15640 [cs.CV], 2025",
             "tag": "Ultrasound Imaging",
-            "image": "https://via.placeholder.com/200x150",
+            "image": "musse.png",
             "link": "https://arxiv.org/abs/2511.15640"
             // "year": "2025"
         },
@@ -80,7 +76,7 @@ const personalData = {
             "authors": "<strong>Tushar Talukder Showrav</strong>, Md Kamrul Hasan",
             "venue": "Physics in Medicine & Biology, Volume 69, Number 11, 2024 (115019)",
             "tag": "Medical Image Segmentation, Computer Vision",
-            "image": "https://via.placeholder.com/200x150",
+            "image": "hig.png",
             "link": "https://iopscience.iop.org/article/10.1088/1361-6560/ad3cb3"
             // "year": "2024"
         }
@@ -93,6 +89,7 @@ const personalData = {
     ]
 
 };
+
 
 
 
