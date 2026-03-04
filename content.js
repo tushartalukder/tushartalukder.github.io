@@ -7,7 +7,7 @@ const personalData = {
     
     // Bio: Use <br> for new lines
     // Updated: Hyperlinks added for UIUC and BUET
-    "bio": `Hi, I am Tushar Talukder Showrav (you can call me Tushar), originally from Dhaka, Bangladesh. I am currently a first-year PhD student at the <a href="https://illinois.edu/" target="_blank" rel="noopener noreferrer">University of Illinois Urbana-Champaign (UIUC)</a>.
+    "bio": `Hi, I am Tushar Talukder Showrav (just call me Tushar), currently a first-year PhD student at the <a href="https://illinois.edu/" target="_blank" rel="noopener noreferrer">University of Illinois Urbana-Champaign (UIUC)</a>.
 
     My research sits at the intersection of Biomedical Imaging and Explainable AI. I focus on computational modeling, quantitative analysis, and interpretable deep learning methods for healthcare applications. Currently, I am working on Quantitative Phase Imaging (QPI) and AI-driven cancer detection, developing transparent and reliable models that can meaningfully support clinical decision-making and translational research.
 
@@ -94,6 +94,7 @@ const personalData = {
     ]
 
 };
+
 
 
 
