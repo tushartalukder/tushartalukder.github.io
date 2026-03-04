@@ -46,6 +46,7 @@ const personalData = {
             "venue": "Healthcare Analytics, Volume 9, June 2026, 100455",
             "tag": "AI in Healthcare, Explainable AI",
             "image": "https://via.placeholder.com/200x150",
+            "link": "https://www.sciencedirect.com/science/article/pii/S2772442526000092"
             // "year": "2026"
         },
         {
@@ -54,6 +55,7 @@ const personalData = {
             "venue": "Knowledge-Based Systems, Volume 329, Part A, 4 November 2025, 114323",
             "tag": "Medical Image Segmentation, Computer Vision",
             "image": "https://via.placeholder.com/200x150",
+            "link": "https://www.sciencedirect.com/science/article/abs/pii/S0950705125013632"
             // "year": "2025"
         },
         {
@@ -62,6 +64,7 @@ const personalData = {
             "venue": "arXiv:2511.15640 [cs.CV], 2025",
             "tag": "Ultrasound Imaging",
             "image": "https://via.placeholder.com/200x150",
+            "link": "https://arxiv.org/abs/2511.15640"
             // "year": "2025"
         },
         {
@@ -70,6 +73,7 @@ const personalData = {
             "venue": "Physics in Medicine & Biology, Volume 69, Number 11, 2024 (115019)",
             "tag": "Medical Image Segmentation, Computer Vision",
             "image": "https://via.placeholder.com/200x150",
+            "link": "https://iopscience.iop.org/article/10.1088/1361-6560/ad3cb3"
             // "year": "2024"
         }
     ],
@@ -81,6 +85,7 @@ const personalData = {
     ]
 
 };
+
 
 
 
