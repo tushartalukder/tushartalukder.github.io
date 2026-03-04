@@ -7,8 +7,16 @@ const personalData = {
     
     // Bio: Use <br> for new lines
     // Updated: Hyperlinks added for UIUC and BUET
-    "bio": "I am a PhD Student at the <a href='https://illinois.edu/' target='_blank'><strong>University of Illinois Urbana-Champaign (UIUC)</strong></a>.<br>Previously, I received my B.Sc. in Electrical and Electronic Engineering from the <a href='https://www.buet.ac.bd/' target='_blank'><strong>Bangladesh University of Engineering and Technology (BUET)</strong></a>.<br>My research bridges the gap between <strong>Biomedical Imaging</strong> and <strong>Explainable AI</strong>. Currently working on Quantitative Phase Imaging (QPI) and cancer detection.",
-    
+    "bio": `Hi, I am Tushar Talukder Showrav (you can call me Tushar), originally from Dhaka, Bangladesh. I am currently a first-year PhD student at the <a href="https://illinois.edu/" target="_blank" rel="noopener noreferrer">University of Illinois Urbana-Champaign (UIUC)</a>.
+
+    My research sits at the intersection of Biomedical Imaging and Explainable AI. I focus on computational modeling, quantitative analysis, and interpretable deep learning methods for healthcare applications. Currently, I am working on Quantitative Phase Imaging (QPI) and AI-driven cancer detection, developing transparent and reliable models that can meaningfully support clinical decision-making and translational research.
+
+    Previously, I earned my B.Sc. in Electrical and Electronic Engineering from the <a href="https://www.buet.ac.bd/" target="_blank" rel="noopener noreferrer">Bangladesh University of Engineering and Technology (BUET)</a>. Over the years, I have published research in medical image analysis and AI for healthcare, gaining experience across both academic research and industry-driven development.
+
+    Before beginning my PhD, I worked as a full-time Research Assistant in a signal processing research lab at BUET and later as a contractual Machine Learning Engineer at a Silicon Valley–based company, contributing to real-world healthcare AI systems.
+
+    Beyond research, I have taken on leadership roles in student technical organizations, organizing engineering events and promoting collaborative innovation. I enjoy music and play the guitar, and I strongly value interdisciplinary collaboration, mentorship, and an engaged research community.`
+    };
     // Your Photo URL
     "photo_url": "https://via.placeholder.com/200", 
 
@@ -86,6 +94,7 @@ const personalData = {
     ]
 
 };
+
 
 
 
