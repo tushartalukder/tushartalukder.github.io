@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tushar's Profile</title>
+    <title>Tushar Talukder Showrav - Profile</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -13,29 +13,39 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; max-width: 900px; margin: 0 auto; padding: 4rem 2rem; }
         
-        /* Header */
-        header { display: flex; justify-content: space-between; gap: 40px; margin-bottom: 4rem; padding-bottom: 3rem; border-bottom: 1px solid var(--border); }
-        .header-content { flex: 1; }
-        h1 { font-size: 2.5rem; letter-spacing: -0.02em; margin-bottom: 0.8rem; color: var(--primary); }
-        p.bio { font-size: 1.1rem; color: var(--text-light); margin-bottom: 2rem; }
-        .profile-photo { width: 300px; height: 300px; flex-shrink: 0; background-color: var(--skeleton); border-radius: 12px; overflow: hidden; transform: rotate(2deg); transition: transform 0.5s; }
-        .profile-photo:hover { transform: rotate(0deg) scale(1.02); }
+        /* 2-Column Hero Layout */
+        .hero-container { display: grid; grid-template-columns: 220px 1fr; gap: 50px; margin-bottom: 5rem; align-items: start; }
+        
+        /* Left: Photo & Icons */
+        .hero-left { display: flex; flex-direction: column; align-items: center; }
+        .profile-photo { width: 220px; height: 220px; background-color: var(--skeleton); border-radius: 12px; overflow: hidden; }
         .profile-photo img { width: 100%; height: 100%; object-fit: cover; }
         
-        /* Buttons */
-        .action-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 15px; }
-        .btn-cv { background-color: var(--primary); color: white !important; padding: 10px 20px; border-radius: 6px; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; }
-        .social-link { color: var(--text-light); font-weight: 500; text-decoration: none; }
-        .social-link:hover { color: var(--primary); }
+        .action-icons { display: flex; gap: 15px; margin-top: 1.5rem; justify-content: center; align-items: center; }
+        .action-icons a { color: #555; transition: color 0.2s; display: flex; align-items: center; }
+        .action-icons a:hover { color: var(--primary); }
+        .action-icons svg { width: 22px; height: 22px; fill: currentColor; }
+        .cv-text { font-weight: 800; font-size: 1.1rem; color: inherit; text-decoration: none; font-family: sans-serif; }
+
+        /* Right: Name & Bio */
+        h1 { font-size: 2.8rem; letter-spacing: -0.02em; margin-bottom: 0.2rem; color: #666; font-weight: 500; line-height: 1.2;}
+        .top-subtitle { font-size: 1.1rem; color: var(--primary); font-weight: 500; margin-bottom: 1.5rem; }
+        
+        .hero-bio { font-size: 1rem; text-align: justify; color: #333; line-height: 1.7; }
+        .hero-bio p { margin-bottom: 1rem; }
+        .hero-bio a { color: var(--primary); text-decoration: none; }
+        .hero-bio a:hover { text-decoration: underline; }
 
         /* Sections */
-        section { margin-bottom: 5rem; }
+        section { margin-bottom: 4rem; }
         h2 { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.1em; color: #888; margin-bottom: 1.5rem; font-weight: 700; border-left: 3px solid var(--primary); padding-left: 12px; }
         
-        /* Dynamic Components */
-        .news-item { display: grid; grid-template-columns: 80px 1fr; gap: 1rem; font-size: 0.95rem; margin-bottom: 0.8rem; }
+        /* Updates (Horizontal List Layout) */
+        .news-list { display: flex; flex-direction: column; gap: 0.8rem; }
+        .news-item { display: grid; grid-template-columns: 85px 1fr; gap: 1rem; font-size: 0.95rem; }
         .news-date { font-family: monospace; color: var(--primary); font-weight: 600; text-align: right; }
 
+        /* Projects & Pubs */
         .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
         .project-card { border: 1px solid var(--border); padding: 1.5rem; border-radius: 8px; transition: transform 0.2s; background: #fff; }
         .project-card:hover { transform: translateY(-3px); border-color: var(--primary); }
@@ -47,25 +57,44 @@
         .pub-thumb img { width: 100%; height: 100%; object-fit: cover; }
         .pub-row:hover .pub-thumb { opacity: 1; filter: grayscale(0%); }
 
-        @media (max-width: 768px) { header { flex-direction: column-reverse; align-items: center; text-align: center; } .profile-photo { width: 150px; height: 150px; } .news-item { display: block; } .pub-thumb { display: none; } }
+        @media (max-width: 768px) { 
+            .hero-container { grid-template-columns: 1fr; text-align: center; } 
+            .hero-left { margin: 0 auto; }
+            .hero-bio { text-align: left; }
+            .news-item { display: block; }
+            .news-date { display: inline-block; text-align: left; margin-right: 10px; margin-bottom: 5px; }
+            .pub-thumb { display: none; }
+        }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="header-content">
-            <h1 id="p-name"><span style="color: black;">Loading</span>...</h1>
-            <p class="bio" id="p-bio"></p>
-            <div class="action-bar">
-                <a id="p-cv" href="#" class="btn-cv" target="_blank">Download CV ↓</a>
-                <a id="link-email" href="#" class="social-link">Email</a>
-                <a id="link-scholar" href="#" class="social-link">Scholar</a>
-                <a id="link-github" href="#" class="social-link">GitHub</a>
-                <a id="link-linkedin" href="#" class="social-link">LinkedIn</a>
+    <div class="hero-container">
+        <div class="hero-left">
+            <div class="profile-photo"><img id="p-photo" src="" alt="Profile"></div>
+            <div class="action-icons">
+                <a id="link-email" href="#" title="Email Me">
+                    <svg viewBox="0 0 24 24"><path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"/></svg>
+                </a>
+                <a id="link-linkedin" href="#" target="_blank" title="LinkedIn">
+                    <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </a>
+                <a id="link-github" href="#" target="_blank" title="GitHub">
+                    <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                </a>
+                <a id="link-scholar" href="#" target="_blank" title="Google Scholar">
+                    <svg viewBox="0 0 24 24"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 2.735c-.098.514-.158 1.042-.158 1.583v3.864L2.094 19.5 3.5 21l2.45-3.45V13.818c.636 1.055 1.53 1.936 2.585 2.548v3.425l2.05-1.4 1.415.99v-2.924A7.95 7.95 0 0 0 12 17c4.411 0 8-3.589 8-8a7.95 7.95 0 0 0-.091-1.192L24 9.5 12 0z"/></svg>
+                </a>
+                <a id="p-cv" href="#" target="_blank" title="Download CV" class="cv-text">CV</a>
             </div>
         </div>
-        <div class="profile-photo"><img id="p-photo" src="" alt="Profile"></div>
-    </header>
+
+        <div>
+            <h1 id="p-name"><span style="color: black; font-weight: 700;">Loading</span>...</h1>
+            <div class="top-subtitle">Learner, Researcher, Engineer</div>
+            <div class="hero-bio" id="p-bio"></div>
+        </div>
+    </div>
 
     <main>
         <section id="sec-updates">
@@ -82,11 +111,6 @@
             <h2>Selected Publications</h2>
             <div id="list-pubs"></div>
         </section>
-
-        <section id="sec-photos">
-            <h2>Photography</h2>
-            <div id="list-photos" style="display: flex; gap: 10px; overflow-x: auto; padding-bottom: 10px;"></div>
-        </section>
     </main>
 
     <script src="content.js"></script>
@@ -99,12 +123,12 @@
             }
             const data = personalData;
 
-            // 1. Header Info (Updated to make the first name black)
+            // 1. Header Info (Tushar in black, rest in gray)
             if (data.name) {
                 const nameParts = data.name.split(' ');
                 const firstWord = nameParts[0];
                 const restOfName = nameParts.slice(1).join(' ');
-                document.getElementById('p-name').innerHTML = `<span style="color: var(--text);">${firstWord}</span> ${restOfName}`;
+                document.getElementById('p-name').innerHTML = `<span style="color: #111; font-weight: 700;">${firstWord}</span> ${restOfName}`;
             }
             
             document.getElementById('p-bio').innerHTML = data.bio;
@@ -116,7 +140,7 @@
             document.getElementById('link-github').href = data.social_links.github;
             document.getElementById('link-linkedin').href = data.social_links.linkedin;
 
-            // 2. Updates
+            // 2. Updates (Horizontal Layout)
             const updatesList = document.getElementById('list-updates');
             data.updates.forEach(u => {
                 updatesList.innerHTML += `
@@ -132,7 +156,7 @@
                 let tagsHtml = p.tags.map(t => `<span class="tag">${t}</span>`).join('');
                 projList.innerHTML += `
                     <div class="project-card">
-                        <h3>${p.title}</h3>
+                        <h3 style="margin-bottom: 0.5rem; color: #111;">${p.title}</h3>
                         <p style="color:#555; font-size:0.9rem; margin-bottom:1rem;">${p.description}</p>
                         <div class="project-tags">${tagsHtml}</div>
                     </div>`;
@@ -148,7 +172,6 @@
                             <a href="${pub.link}" target="_blank" class="pub-title" style="font-weight:700; display:block; margin-bottom:0.3rem; text-decoration:none; color:#111;">
                                 ${pub.title}
                             </a>
-                            
                             <div style="font-size:0.9rem; color:#555;">
                                 ${pub.authors}<br>
                                 <em>${pub.venue}</em>
@@ -157,14 +180,7 @@
                         </div>
                     </div>`;
             });
-
-            // 5. Photos
-            const photoList = document.getElementById('list-photos');
-            data.photography.forEach(url => {
-                photoList.innerHTML += `<img src="${url}" style="height: 150px; border-radius: 6px;">`;
-            });
         });
     </script>
 </body>
 </html>
-
