@@ -46,7 +46,7 @@ const personalData = {
             "venue": "Healthcare Analytics, Volume 9, June 2026, 100455",
             "tag": "Explainable AI",
             "image": "https://via.placeholder.com/200x150",
-            "year": "2026"
+            // "year": "2026"
         },
         {
             "title": "DFUSegNet: Boundary-Aware Hierarchical Attentive Fusion Network with Adaptive Preprocessing for Diabetic Foot Ulcer Segmentation",
@@ -54,7 +54,7 @@ const personalData = {
             "venue": "Knowledge-Based Systems, Volume 329, Part A, 4 November 2025, 114323",
             "tag": "Medical Image Segmentation",
             "image": "https://via.placeholder.com/200x150",
-            "year": "2025"
+            // "year": "2025"
         },
         {
             "title": "Multi-Stage Residual-Aware Unsupervised Deep Learning Framework for Consistent Ultrasound Strain Elastography",
@@ -62,7 +62,7 @@ const personalData = {
             "venue": "arXiv:2511.15640 [cs.CV], 2025",
             "tag": "Ultrasound Imaging",
             "image": "https://via.placeholder.com/200x150",
-            "year": "2025"
+            // "year": "2025"
         },
         {
             "title": "Hi-gMISnet: Generalized Medical Image Segmentation Using DWT-Based Multilayer Fusion and Dual Mode Attention into High Resolution pGAN",
@@ -70,7 +70,7 @@ const personalData = {
             "venue": "Physics in Medicine & Biology, Volume 69, Number 11, 2024 (115019)",
             "tag": "Medical Image Segmentation",
             "image": "https://via.placeholder.com/200x150",
-            "year": "2024"
+            // "year": "2024"
         }
     ],
 
@@ -81,4 +81,5 @@ const personalData = {
     ]
 
 };
+
 
