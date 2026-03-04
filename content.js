@@ -44,7 +44,7 @@ const personalData = {
             "title": "An Explainable Artificial Intelligence Framework for Trustworthy Arrhythmia Detection from Heart Rhythm Data",
             "authors": "<strong>Tushar Talukder Showrav</strong>, Soyabul Islam Lincoln, Md Kamrul Hasan",
             "venue": "Healthcare Analytics, Volume 9, June 2026, 100455",
-            "tag": "Explainable AI",
+            "tag": "AI in Healthcare, Explainable AI",
             "image": "https://via.placeholder.com/200x150",
             // "year": "2026"
         },
@@ -52,7 +52,7 @@ const personalData = {
             "title": "DFUSegNet: Boundary-Aware Hierarchical Attentive Fusion Network with Adaptive Preprocessing for Diabetic Foot Ulcer Segmentation",
             "authors": "<strong>Tushar Talukder Showrav</strong>, Muhammad Zubair Hasan, Md Kamrul Hasan",
             "venue": "Knowledge-Based Systems, Volume 329, Part A, 4 November 2025, 114323",
-            "tag": "Medical Image Segmentation",
+            "tag": "Medical Image Segmentation, Computer Vision",
             "image": "https://via.placeholder.com/200x150",
             // "year": "2025"
         },
@@ -68,7 +68,7 @@ const personalData = {
             "title": "Hi-gMISnet: Generalized Medical Image Segmentation Using DWT-Based Multilayer Fusion and Dual Mode Attention into High Resolution pGAN",
             "authors": "<strong>Tushar Talukder Showrav</strong>, Md Kamrul Hasan",
             "venue": "Physics in Medicine & Biology, Volume 69, Number 11, 2024 (115019)",
-            "tag": "Medical Image Segmentation",
+            "tag": "Medical Image Segmentation, Computer Vision",
             "image": "https://via.placeholder.com/200x150",
             // "year": "2024"
         }
@@ -81,6 +81,7 @@ const personalData = {
     ]
 
 };
+
 
 
 
