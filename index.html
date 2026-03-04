@@ -55,7 +55,6 @@
     <header>
         <div class="header-content">
             <h1 id="p-name"><span style="color: black;">Loading</span>...</h1>
-            <!-- <h1 id="p-name">Loading...</h1> -->
             <p class="bio" id="p-bio"></p>
             <div class="action-bar">
                 <a id="p-cv" href="#" class="btn-cv" target="_blank">Download CV ↓</a>
@@ -100,8 +99,14 @@
             }
             const data = personalData;
 
-            // 1. Header Info
-            document.getElementById('p-name').innerText = data.name;
+            // 1. Header Info (Updated to make the first name black)
+            if (data.name) {
+                const nameParts = data.name.split(' ');
+                const firstWord = nameParts[0];
+                const restOfName = nameParts.slice(1).join(' ');
+                document.getElementById('p-name').innerHTML = `<span style="color: var(--text);">${firstWord}</span> ${restOfName}`;
+            }
+            
             document.getElementById('p-bio').innerHTML = data.bio;
             document.getElementById('p-cv').href = data.cv_link;
             document.getElementById('p-photo').src = data.photo_url;
@@ -161,7 +166,4 @@
         });
     </script>
 </body>
-
 </html>
-
-
