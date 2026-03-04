@@ -21,7 +21,7 @@ const personalData = {
         { "date": "Mar 2026", "text": "CARDxnosis is published in Neurocomputing." },
         { "date": "Feb 2026", "text": "EXGnet is published in Healthcare Analytics." },
         { "date": "Jan 2026", "text": "Started PhD at University of Illinois Urbana-Champaign (UIUC)." },
-        { "date": "Nov 2025", "text": "Our myECGai, AI-based portable ECG device launched in teh global market." },
+        { "date": "Nov 2025", "text": "Our myECGai, AI-based portable ECG devices launched in the global market." },
         { "date": "Aug 2025", "text": "DFUSegNet is published in Knowledge-Based Systems." },
         { "date": "Apr 2024", "text": "Hi-gMISnet is published in Physics in Medicine and Biology." },
         { "date": "Nov 2023", "text": "Joined Teton Private Ltd. as a contractual ML engineer." },
@@ -86,6 +86,7 @@ const personalData = {
     ]
 
 };
+
 
 
 
