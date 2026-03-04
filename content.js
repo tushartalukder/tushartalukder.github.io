@@ -7,7 +7,7 @@ const personalData = {
     
     // Bio: Use <br> for new lines
     // Updated: Hyperlinks added for UIUC and BUET
-    "bio": "Hi, I am Tushar Talukder Showrav (just call me Tushar), a first-year PhD student at the <a href='https://illinois.edu/' target='_blank'>University of Illinois Urbana-Champaign (UIUC)</a>. My research lies at the intersection of Biomedical Imaging and Explainable AI, with a focus on computational imaging and interpretable deep learning for healthcare. I currently work on Quantitative Phase Imaging (QPI) and AI-driven cancer detection, developing transparent and reliable models to support clinical decision-making and translational research. I previously earned my B.Sc. in Electrical and Electronic Engineering from the <a href='https://www.buet.ac.bd/' target='_blank'>Bangladesh University of Engineering and Technology (BUET)</a>. My experience spans academic research and industry, including work on medical image analysis and real-world healthcare AI systems. Beyond research, I value leadership, collaboration, and community engagement. I enjoy music, play the guitar, and actively seek interdisciplinary innovation with meaningful impact.",
+    "bio": "Hi, I am Tushar Talukder Showrav (just call me Tushar), a first-year PhD student at the <a href='https://illinois.edu/' target='_blank'>University of Illinois Urbana-Champaign (UIUC)</a>. My research lies at the intersection of Imaging and Artificial Intelligence, with a focus on computational imaging and interpretable deep learning for healthcare. I currently work on Quantitative Phase Imaging (QPI) and AI-driven cancer diagnosis, developing trustworthy and reliable models to support clinical decision-making and translational research. I previously earned my B.Sc. in Electrical and Electronic Engineering from the <a href='https://www.buet.ac.bd/' target='_blank'>Bangladesh University of Engineering and Technology (BUET)</a>. My experience spans academic research and industry, including work on medical imaging and real-world healthcare AI systems. Beyond research, I value leadership and collaboration. I am actively seeking industry research internships where I can contribute to innovative, high-impact technologies while gaining experience in real-world product development and interdisciplinary teamwork. Outside of work, I enjoy music, playing the guitar, and traveling.",
     "photo_url": "dp1.jpeg", 
 
     "social_links": {
@@ -86,6 +86,7 @@ const personalData = {
     ]
 
 };
+
 
 
 
