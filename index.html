@@ -67,95 +67,44 @@
 
         .pub-row { display: flex; gap: 20px; padding: 1.2rem; border: 1px solid transparent; border-radius: 8px; transition: all 0.2s; margin-bottom: 1rem; position: relative; }
         .pub-row:hover { border-color: #eee; box-shadow: 0 5px 15px rgba(0,0,0,0.03); }
-
-
-
-        /* The base state */
+        /* The Container */
         .pub-thumb { 
             width: 100px; 
             height: 80px; 
             flex-shrink: 0; 
-            background: #eee; 
+            position: relative; 
+            z-index: 1; 
+            transform-origin: center left; 
+            transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); 
+            /* The background MUST be transparent so the fixed box disappears on hover */
+            background: transparent; 
+        }
+        
+        /* The Image Base State */
+        .pub-thumb img { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; /* Keeps it perfectly cropped as a neat thumbnail */
             border-radius: 4px; 
             opacity: 0.7; 
-            filter: grayscale(100%); 
-            /* Changed to 0.4s with a custom cubic-bezier for a buttery-smooth glide */
+            /* The invisible drop-shadow is here so it animates smoothly when hovered */
+            filter: grayscale(100%) drop-shadow(0 0 0 rgba(0,0,0,0)); 
             transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); 
-            transform-origin: center left; 
-            position: relative; 
-            z-index: 1; 
         }
         
-        /* The hover state */
+        /* Container Hover State */
         .pub-thumb:hover { 
-            transform: scale(4.5); /* 4.5 is a sweet spot for readability without overflowing the screen */
+            transform: scale(4.5); 
             z-index: 10; 
-            /* Layered shadows (a large diffuse one + a smaller tight one) create realistic, 3D depth */
-            box-shadow: 0 25px 50px rgba(0,0,0,0.15), 0 10px 20px rgba(0,0,0,0.1); 
-            opacity: 1 !important; 
-            filter: grayscale(0%) !important; 
-            background-color: #ffffff; 
-            border: 1px solid #eaeaea; /* Adds a crisp, subtle edge to the expanded image */
-            border-radius: 6px; 
         }
         
-        /* Ensure the image uncrops smoothly */
+        /* Image Hover State */
         .pub-thumb:hover img {
-            object-fit: contain; 
-            border-radius: 4px; 
+            object-fit: contain; /* Shrinks the image to its natural aspect ratio */
+            opacity: 1; 
+            /* Drop-shadow perfectly hugs the natural shape of the image, ignoring empty space! */
+            filter: grayscale(0%) drop-shadow(0 6px 10px rgba(0,0,0,0.25)); 
         }
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-        /* .pub-thumb { 
-            width: 100px; 
-            height: 80px; 
-            flex-shrink: 0; 
-            background: #eee; 
-            border-radius: 4px; 
-            opacity: 0.7; 
-            filter: grayscale(100%); 
-            transition: all 0.3s ease; 
-            transform-origin: center left; 
-            position: relative; 
-            z-index: 1; 
-        }
-        .pub-thumb img { width: 100%; height: 100%; object-fit: cover; border-radius: 4px; }
-        
-        .pub-row:hover .pub-thumb { opacity: 1; filter: grayscale(0%); }
-        
-        .pub-thumb:hover { 
-            transform: scale(6); 
-            z-index: 10; 
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2); 
-            opacity: 1 !important; 
-            filter: grayscale(0%) !important; 
-        } */
 
         /* Footer styling */
         footer {
@@ -323,6 +272,7 @@
     </script>
 </body>
 </html>
+
 
 
 
