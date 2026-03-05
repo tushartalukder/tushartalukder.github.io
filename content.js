@@ -33,7 +33,7 @@ const personalData = {
             "tags": ["Quantitative Phase Imaging", "Physics-Informed Learning", "Computational Pathology"]
         },
         {
-            "title": "Pre-Cancer Detection",
+            "title": "Early Cancer Detection",
             "description": "Developing deep learning models to identify precancerous lesions, including advanced adenomas characterized by high-grade dysplasia, large size, or villous features, to enable early intervention and reduce progression to invasive cancer.",
             "tags": ["Computational Pathology", "Early Diagnosis", "Deep Learning"]
         }
@@ -85,6 +85,7 @@ const personalData = {
     ]
 
 };
+
 
 
 
