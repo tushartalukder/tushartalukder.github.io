@@ -17,7 +17,6 @@ const personalData = {
     },
 
     "updates": [
-        { "date": "Mar 2026", "text": "CARDxnosis is published in Healthcare Analytics." },
         { "date": "Mar 2026", "text": "CARDxnosis is published in Neurocomputing." },
         { "date": "Feb 2026", "text": "EXGnet is published in Healthcare Analytics." },
         { "date": "Jan 2026", "text": "Started PhD at University of Illinois Urbana-Champaign (UIUC)." },
@@ -86,6 +85,7 @@ const personalData = {
     ]
 
 };
+
 
 
 
