@@ -81,28 +81,44 @@
         }
         
         /* The Image Base State */
+        /* 1. The Container Base State */
+        .pub-thumb { 
+            width: 100px; 
+            height: 80px; 
+            flex-shrink: 0; 
+            position: relative; 
+            z-index: 1; 
+            transform-origin: center left; 
+            transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); 
+            background: transparent; 
+        }
+        
+        /* 2. The Image Base State (Grayscale & Cropped) */
         .pub-thumb img { 
             width: 100%; 
             height: 100%; 
-            object-fit: cover; /* Keeps it perfectly cropped as a neat thumbnail */
+            object-fit: cover; 
             border-radius: 4px; 
             opacity: 0.7; 
-            /* The invisible drop-shadow is here so it animates smoothly when hovered */
             filter: grayscale(100%) drop-shadow(0 0 0 rgba(0,0,0,0)); 
             transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); 
         }
-        .pub-row:hover .pub-thumb { opacity: 1; filter: grayscale(0%); }
-        /* Container Hover State */
+        
+        /* 3. ROW HOVER: When the cursor is ANYWHERE on the paper details -> Bring back color */
+        .pub-row:hover .pub-thumb img {
+            opacity: 1;
+            filter: grayscale(0%) drop-shadow(0 0 0 rgba(0,0,0,0)); 
+        }
+        
+        /* 4. IMAGE HOVER: When the cursor is EXACTLY on the image -> Zoom the container */
         .pub-thumb:hover { 
             transform: scale(4.5); 
             z-index: 10; 
         }
         
-        /* Image Hover State */
+        /* 5. IMAGE HOVER: When the cursor is EXACTLY on the image -> Reveal original shape & add shadow */
         .pub-thumb:hover img {
-            object-fit: contain; /* Shrinks the image to its natural aspect ratio */
-            opacity: 1; 
-            /* Drop-shadow perfectly hugs the natural shape of the image, ignoring empty space! */
+            object-fit: contain; 
             filter: grayscale(0%) drop-shadow(0 6px 10px rgba(0,0,0,0.25)); 
         }
 
@@ -272,6 +288,7 @@
     </script>
 </body>
 </html>
+
 
 
 
