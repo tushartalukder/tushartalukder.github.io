@@ -41,6 +41,17 @@ const personalData = {
 
     "publications": [
         {
+            "title": "CARDxnosis: Anatomico-clinical knowledge-driven explainable network with multi-domain information fusion for ECG diagnosis and report generation",
+            "authors": "<strong>Tushar Talukder Showrav</strong>, Soyabul Islam Lincoln, Md Kamrul Hasan",
+            "venue": "Neurocomputing, 2026",
+            "tag": "AI in Healthcare, Explainable AI",
+            "image": "card.png",
+            "link": "https://www.sciencedirect.com/science/article/pii/S2772442526000092"
+            // "year": "2026"
+        },
+
+        
+        {
             "title": "An Explainable Artificial Intelligence Framework for Trustworthy Arrhythmia Detection from Heart Rhythm Data",
             "authors": "<strong>Tushar Talukder Showrav</strong>, Soyabul Islam Lincoln, Md Kamrul Hasan",
             "venue": "Healthcare Analytics, Volume 9, June 2026, 100455",
@@ -85,6 +96,7 @@ const personalData = {
     ]
 
 };
+
 
 
 
