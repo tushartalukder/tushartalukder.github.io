@@ -46,7 +46,7 @@ const personalData = {
             "venue": "Neurocomputing, 2026",
             "tag": "AI in Healthcare, Explainable AI",
             "image": "card.png",
-            "link": "https://www.sciencedirect.com/science/article/pii/S2772442526000092"
+            "link": "https://www.sciencedirect.com/science/article/abs/pii/S0925231226006843"
             // "year": "2026"
         },
 
